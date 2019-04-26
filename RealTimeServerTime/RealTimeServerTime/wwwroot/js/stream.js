@@ -19,8 +19,8 @@ document.getElementById("streamButton").addEventListener("click", (event) => __a
     try {
         connection.stream("StartTimer")
             .subscribe({
-                next: (item) => {
-                    console.log(item);
+                next: (datefromServer) => {
+                    document.getElementById("dateLabel").textContent = datefromServer;
                 },
                 complete: () => {
                     consoe.log("completed");
